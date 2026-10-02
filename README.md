@@ -29,7 +29,7 @@ A separate analysis summarizes 2023 median resistance values across selected ant
 This repository includes the [Jupyter notebook](<Acinetobacter_Colistin_Resistance_India_2018_2023.ipynb>) and both CSV exports used in the analysis:
 
 - [Time-series CSV](https://github.com/shampharma05/acinetobacter-colistin-resistance-india/blob/main/Time%20series%20of%20resistance%20to%20antibiotics%20%282018-2023%29_All-BLOOD.csv): bloodstream infections, *Acinetobacter* spp., and colistin; all regions. The export contains annual reporting-CTA summaries and individual CTA records.
-- [2023 summary CSV](<Resistance to antibiotics in 2023_All-Bloodstream.csv>): bloodstream infections and *Acinetobacter* spp.; all regions. The summary covers antibiotics with at least 10 BCIs with AST results, as specified in the export.
+- [2023 summary CSV](<Resistance to antibiotics in 2023_All-Bloodstream.csv>): bloodstream infections and *Acinetobacter* spp.; all regions. The summary covers antibiotics with at least 10 blood culture isolates (BCIs) with AST results, as specified in the export.
 
 For the India trend, the notebook selects India (`IND`) and compares the reported yearly resistance percentages with the reporting-CTA median for each year.
 
