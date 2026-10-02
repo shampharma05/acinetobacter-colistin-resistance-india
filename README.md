@@ -35,7 +35,7 @@ For the India trend, records were selected for India (`IND`) and colistin. India
 
 For the separate 2023 profile, antibiotic medians were taken from the export’s summary. They summarize reporting-CTA resistance values and should not be interpreted as pooled resistance across all tested observations.
 
-The analysis was prepared in Python using Pandas and Matplotlib in a Jupyter notebook. WHO GLASS data and dashboard information are available from the [WHO GLASS page](https://www.who.int/initiatives/glass).
+The analysis was prepared in Python using Pandas and Matplotlib in a Jupyter notebook. To reproduce it, use the corresponding CSV exports and run the notebook cells in order. WHO GLASS data and dashboard information are available from the [WHO GLASS page](https://www.who.int/initiatives/glass).
 
 ## Results
 
@@ -71,12 +71,10 @@ The median values ranged from **3.85% for colistin to 65.33% for imipenem** in t
 - The India trend and the separate 2023 antibiotic profile answer different questions. The global summary is not used to infer India-specific resistance.
 - This descriptive analysis does not establish the biological mechanisms responsible for resistance.
 
-## Reproducibility and verification status
+## Reproducibility and verification
 
-The India percentages, annual reporting-CTA medians, observation counts, and 2023 antibiotic medians in this README were checked against the supplied CSV files.
-
-The notebook’s saved 2023 output currently shows seven antibiotics, while the supplied 2023 CSV summary contains eight, including tigecycline. The notebook output needs to be refreshed against the supplied CSV before it can reproduce the full 2023 profile.
+The India percentages, annual reporting-CTA medians, observation counts, and 2023 antibiotic medians were checked against the supplied CSV exports. The notebook’s 2023 profile includes all eight antibiotics in the summary, including Tigecycline.
 
 ## Project status
 
-The reported values in this README have been checked against the supplied CSV exports. The notebook’s saved 2023 output still needs to be refreshed so it matches those exports.
+The descriptive analysis and figures are complete. The reported results are based on the supplied GLASS-AMR exports and should be interpreted in light of surveillance coverage and the limitations described above.
