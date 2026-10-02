@@ -14,6 +14,9 @@ The analysis focuses on three aspects:
 - Comparison of India-specific reported values with the GLASS reporting-CTA median.
 - The 2023 reported resistance profile across selected antibiotics.
 
+- The analysis focuses on reported colistin resistance in Acinetobacter spp. bloodstream infections in India from 2018 to 2023. A separate exploratory analysis presents the global antibiotic resistance profile for 2023 and is not used to infer India-specific resistance patterns.
+  
+
 ## Research Objectives
 
 - Describe reported colistin resistance in India from 2018 to 2023.
