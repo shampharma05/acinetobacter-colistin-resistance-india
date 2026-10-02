@@ -1,123 +1,82 @@
-# WHO GLASS-Based Analysis of Reported Colistin Resistance in India
+# Reported Colistin Resistance in *Acinetobacter* spp. Bloodstream Infections in India, 2018–2023
 
-A longitudinal analysis of reported colistin resistance in *Acinetobacter* spp. bloodstream infections in India from 2018 to 2023, with a separate exploratory analysis of the global antibiotic resistance profile for 2023.
+A descriptive analysis of WHO GLASS-AMR surveillance data, with a separate summary of reported resistance across selected antibiotics in 2023.
 
 ## Overview
 
-Antimicrobial resistance (AMR) is a major public health concern that reduces the effectiveness of antimicrobial treatment. Monitoring resistance patterns over time helps describe changes in reported resistance and supports antimicrobial resistance surveillance.
+Antimicrobial resistance (AMR) surveillance helps describe resistance patterns in data reported by participating countries, territories, and areas (CTAs). This project examines reported colistin resistance in *Acinetobacter* spp. bloodstream infections in India from 2018 to 2023.
 
-This project examines reported colistin resistance in *Acinetobacter* spp. bloodstream infections in India using data from the World Health Organization's Global Antimicrobial Resistance and Use Surveillance System (WHO GLASS).
+A separate analysis summarizes the 2023 median resistance values across selected antibiotics in the GLASS export. These are summaries of reporting-CTA values, not estimates of pooled global resistance or India’s national population prevalence.
 
-The analysis focuses on three aspects:
+## Research questions
 
-- Reported colistin resistance in India from 2018 to 2023.
-- Comparison of India-specific reported values with the GLASS reporting-CTA median.
-- A separate exploratory analysis of the global 2023 antibiotic resistance profile.
+- How did reported colistin resistance in India vary from 2018 to 2023?
+- How did India’s reported values compare with the reporting-CTA median for each year?
+- What were the 2023 median resistance values across selected antibiotics in the supplied GLASS summary?
 
-The global 2023 analysis provides broader context and is not used to infer India-specific resistance patterns.
-
-## Research Objectives
-
-- Describe reported colistin resistance in India from 2018 to 2023.
-- Compare India-specific reported values with the GLASS reporting-CTA median.
-- Examine the 2023 global median resistance profile across selected antibiotics.
-
-## Study Scope
+## Scope
 
 - **Organism:** *Acinetobacter* spp.
 - **Infection type:** Bloodstream infections
-- **Antibiotic of primary interest:** Colistin
-- **Geographical scope:** India for the longitudinal analysis; global reporting data for the separate 2023 profile
-- **Study period:** 2018–2023 for the longitudinal analysis; 2023 for the antibiotic profile
-- **Data source:** WHO GLASS-AMR dashboard
-- **Analysis type:** Secondary descriptive longitudinal analysis and exploratory comparative analysis
+- **Primary antibiotic:** Colistin
+- **Longitudinal analysis:** India, 2018–2023
+- **Separate 2023 profile:** Selected antibiotics in the supplied GLASS summary
+- **Data source:** WHO Global Antimicrobial Resistance and Use Surveillance System (GLASS), AMR dashboard export
+- **Analysis type:** Secondary descriptive analysis
 
-## Methodology
+## Data and methods
 
-The analysis follows a structured workflow:
+The analysis uses two WHO GLASS-AMR CSV exports:
 
-1. **Data retrieval:** Obtain antimicrobial resistance surveillance data from the WHO GLASS-AMR dashboard.
-2. **Data filtering:** Select India, bloodstream infections, *Acinetobacter* spp. and colistin for the longitudinal analysis.
-3. **Data organization:** Organize the reported resistance values by year.
-4. **Comparative analysis:** Compare India-specific reported values with the GLASS reporting-CTA median.
-5. **Resistance profile analysis:** Examine the 2023 global median resistance profile across selected antibiotics for *Acinetobacter* spp. bloodstream infections.
-6. **Data visualization:** Use Python libraries to generate figures and summarize the findings.
+- A time-series export for bloodstream infections caused by *Acinetobacter* spp., with colistin selected. It contains annual reporting-CTA summaries and individual country, territory, and area records.
+- A 2023 bloodstream summary for *Acinetobacter* spp. across selected antibiotics.
 
-## Tools and Technologies
+For the India trend, records were selected for India (`IND`) and colistin. India’s yearly resistance percentages were compared with the reporting-CTA median for each year.
 
-- **Python:** Data analysis and visualization.
-- **Pandas:** Data manipulation and organization.
-- **Matplotlib:** Data visualization.
-- **Jupyter Notebook:** Interactive environment for documenting and executing the analysis.
-- **Google Colab:** Cloud-based environment used to run the notebook.
-- **WHO GLASS-AMR:** Source of antimicrobial resistance surveillance data.
+For the separate 2023 profile, antibiotic medians were taken from the export’s summary. They summarize reporting-CTA resistance values and should not be interpreted as pooled resistance across all tested observations.
+
+The analysis was prepared in Python using Pandas and Matplotlib in a Jupyter notebook. WHO GLASS data and dashboard information are available from the [WHO GLASS page](https://www.who.int/initiatives/glass).
 
 ## Results
 
-### 1. Longitudinal Reported Colistin Resistance in India
+### India: reported colistin resistance
 
-The longitudinal analysis describes reported colistin resistance in *Acinetobacter* spp. bloodstream infections in India between 2018 and 2023.
+- **2018:** 0.00% resistance; 42 interpretable AST observations; 0 resistant observations; reporting-CTA median 1.27%.
+- **2019:** 4.55% resistance; 330 interpretable AST observations; 15 resistant observations; reporting-CTA median 2.21%.
+- **2020:** 0.81% resistance; 371 interpretable AST observations; 3 resistant observations; reporting-CTA median 2.67%.
+- **2021:** 2.04% resistance; 3,880 interpretable AST observations; 79 resistant observations; reporting-CTA median 2.30%.
+- **2022:** 0.77% resistance; 4,955 interpretable AST observations; 38 resistant observations; reporting-CTA median 3.24%.
+- **2023:** 0.97% resistance; 6,726 interpretable AST observations; 65 resistant observations; reporting-CTA median 3.86%.
 
-- India-specific reported resistance values ranged from 0.00% to 4.55% during the study period.
-- Comparison with the GLASS reporting-CTA median showed variation across years.
-- India-specific values were above the reporting-CTA median in 2019 and below it in 2018 and 2020–2023.
+India’s reported values ranged from **0.00% to 4.55%**. India’s value was above the reporting-CTA median in 2019 and below it in every other year shown.
 
-These findings describe reported surveillance data and should be interpreted in the context of changing numbers of interpretable tests and reporting coverage.
+### Selected antibiotic medians in the 2023 summary
 
-### 2. Global 2023 Antibiotic Resistance Profile
+- **Amikacin:** 44.21%
+- **Colistin:** 3.85%
+- **Doripenem:** 48.79%
+- **Gentamicin:** 54.44%
+- **Imipenem:** 65.33%
+- **Meropenem:** 60.00%
+- **Minocycline:** 7.11%
+- **Tigecycline:** 11.87%
 
-The separate 2023 analysis examined median resistance values across selected antibiotics for *Acinetobacter* spp. bloodstream infections in the available global reporting data.
+The median values ranged from **3.85% for colistin to 65.33% for imipenem** in the supplied summary. These are descriptive summaries across reporting CTAs, not pooled global or national population estimates.
 
-- The reported median resistance values ranged from approximately 3.85% for colistin to 65.33% for imipenem among the selected antibiotics.
-- These values describe the available reported surveillance data and should not be interpreted as national population prevalence.
-- The profile provides a descriptive comparison across antibiotics, not an India-specific estimate.
+## Interpretation and limitations
 
-## Key Findings
+- These results describe reported surveillance observations in the supplied GLASS exports. They may not represent every bloodstream infection in India or globally.
+- The number of interpretable AST observations for India varied from 42 in 2018 to 6,726 in 2023. Changes in observation counts and reporting coverage should be considered when comparing years.
+- The reporting-CTA median summarizes CTA-level values. It is not the same as a population-weighted global rate.
+- The India trend and the separate 2023 antibiotic profile answer different questions. The global summary is not used to infer India-specific resistance.
+- This descriptive analysis does not establish the biological mechanisms responsible for resistance.
 
-- Reported colistin resistance in India varied across the study period.
-- India-specific reported values differed from the GLASS reporting-CTA median across years.
-- The 2023 global median resistance profile showed variation across the selected antibiotics.
-- The number of interpretable antimicrobial susceptibility testing observations increased from 42 in 2018 to 6,726 in 2023.
+## Reproducibility and verification status
 
-Changes in the number of interpretable observations and reporting coverage should be considered when comparing resistance patterns across years.
+The India percentages, annual reporting-CTA medians, observation counts, and 2023 antibiotic medians in this README were checked against the supplied CSV files.
 
-## Limitations
+The notebook’s saved 2023 output currently shows seven antibiotics, while the supplied 2023 CSV summary contains eight, including tigecycline. The notebook output needs to be refreshed against the supplied CSV before it can reproduce the full 2023 profile.
 
-- India-specific values represent reported surveillance data and may not capture all bloodstream infections nationally.
-- GLASS reporting-CTA medians summarize reporting CTAs and are not equivalent to global population prevalence.
-- The number of interpretable antimicrobial susceptibility testing observations varied considerably across the study period.
-- Changes in reporting coverage may influence comparisons between years.
-- The global 2023 antibiotic profile is separate from the India-specific longitudinal analysis.
-- This descriptive analysis does not establish the biological mechanisms responsible for antimicrobial resistance.
+## Project status
 
-## Reproducibility
-
-The analysis was conducted using a Jupyter Notebook in Google Colab.
-
-The notebook contains the Python code, data-processing steps, summary tables and visualizations used in this project.
-
-To reproduce the analysis:
-
-1. Download the Jupyter Notebook from this repository.
-2. Obtain the corresponding WHO GLASS-AMR datasets.
-3. Upload the datasets to your Google Colab environment.
-4. Update file paths if necessary.
-5. Run the notebook cells in order to reproduce the analysis and visualizations.
-
-The analysis uses Python, Pandas and Matplotlib.
-
-Reproducing the results requires the appropriate source datasets and compatible data structures. Saved notebook outputs alone are not sufficient for independent reproduction.
-
-## Data Source
-
-World Health Organization. Global Antimicrobial Resistance and Use Surveillance System (GLASS), GLASS-AMR dashboard. Data through 2023.
-
-This project uses secondary surveillance data to describe reported antimicrobial resistance patterns.
-
-## References
-
-1. Islam, M. M., Jung, D. E., Shin, W. S., & Oh, M. H. (2024). Colistin resistance mechanism and management strategies of colistin-resistant *Acinetobacter baumannii* infections. *Pathogens, 13*(12), 1049. https://doi.org/10.3390/pathogens13121049
-
-## Project Status
-
-The poster-based analysis has been completed. The underlying data, calculations, Python workflow and generated figures are being organized and verified to support transparent documentation and reproducibility.
+The reported values in this README have been checked against the supplied CSV exports. The notebook’s saved 2023 output still needs to be refreshed so it matches those exports.
